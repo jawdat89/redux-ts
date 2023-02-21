@@ -1,9 +1,10 @@
 import axios from "axios";
+import { Dispatch } from "react";
 import { RepositoriesActionType } from "../action-types";
 import { RepositoriesAction } from '../actions';
 
 export const searchRepositories = (term: string) => {
-  return async (dispatch: any) => { 
+  return async (dispatch: Dispatch<RepositoriesAction>) => { 
     dispatch({
       type: RepositoriesActionType.SEARCH_REPOSITORIES
     });
